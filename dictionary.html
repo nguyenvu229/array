@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<input type="text" id="input">
+<button type="button" onclick="search()">Search</button>
+<p id="result"></p>
+
+<body>
+  <script>
+    let wordList = ["pig", "cat", "bird", "fish"]
+    let meaning = ["con lợn", "con mèo", "con chim", "con cá"]
+
+    function search() {
+      let word = document.getElementById("input").value
+      
+      for (let i = 0; i < wordList.length; i++) {
+        if (word == wordList[i]) {
+          document.getElementById("result").innerHTML = meaning[i]
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
