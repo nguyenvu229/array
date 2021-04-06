@@ -16,15 +16,17 @@
   <script>
     let wordList = ["pig", "cat", "bird", "fish"]
     let meaning = ["con lợn", "con mèo", "con chim", "con cá"]
+    let definition = ""
 
     function search() {
       let word = document.getElementById("input").value
-      
+      definition = "This word does not exist!"
       for (let i = 0; i < wordList.length; i++) {
         if (word == wordList[i]) {
-          document.getElementById("result").innerHTML = meaning[i]
+          definition = meaning[i]
         }
       }
+      document.getElementById("result").innerHTML = definition
     }
   </script>
 </body>
