@@ -21,6 +21,7 @@
     function search() {
       let word = document.getElementById("input").value
       definition = "This word does not exist!"
+      
       for (let i = 0; i < wordList.length; i++) {
         if (word == wordList[i]) {
           definition = meaning[i]
